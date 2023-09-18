@@ -9,12 +9,29 @@
       <RouterLink class="link-item" to="/start"><button class="button-bottom"><span>Get Started!</span></button></RouterLink>
   </div>
 
+  <div v-html="svgCode"></div>
+
 </div>
 </template>
 
-<script setup>
+<script>
 
-
+export default {
+  data() {
+    return {
+      svgCode: `<svg height="130" width="500">
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:rgb(64, 166, 235);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgb(235,235,235);stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <ellipse cx="100" cy="80" rx="100" ry="80" fill="url(#grad1)" />
+        <text fill="#ffffff" font-size="40" font-family="Verdana" x="30" y="86">FRENZY</text>
+      </svg>`,
+    };
+  },
+};
 </script>
 
 <style scoped>
